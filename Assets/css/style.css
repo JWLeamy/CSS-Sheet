@@ -1,6 +1,9 @@
-
+:root {
+    --background: lightblue;
+    --main: beige;
+}
 body {
-    background-color: beige;
+    background-color: var(--main);
 }
 header {
     text-align: center;
@@ -14,15 +17,22 @@ main {
 }
 
 .card {
-    display: flex;
     flex-direction: column;
     flex: 0 0 400px;
     width: 30%;
     border-style: dotted;
     margin: 2%;
-    justify-content: space-evenly;
-    justify-items: center;
-    border-radius: 15px 15px 0px 0px ;
+    border-radius: 15px 15px 15px 15px ;
+    transition: all 2s ease-in-out;
+    background-image: linear-gradient(blue, lightblue);
+}
+
+.card:hover {
+    background-color: lightgoldenrodyellow;
+    cursor: pointer;
+    box-shadow: 0 0 50px grey;
+    font-weight: bold;
+    transition: all 2s;
 }
 
 .card header {
@@ -31,7 +41,7 @@ main {
     margin-left: 50px;
     justify-content: center;
     border-style: dotted;
-    background-color: lightblue;
+    background-color: var(--background);
     border-radius: 30px 30px 0px 0px;
     bottom: 15px;
 }
@@ -44,5 +54,28 @@ main {
 
 .code {
     display: block;
-    background-color: lightblue;
+    background-color: var(--background);
+}
+
+.code:active {
+    background-color: lightpink;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+}
+
+@media screen and (max-width: 992px) {
+    .card{
+        width: 50%;
+        transition: all 2s ease-in-out;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .card{
+        width: 100%;
+        transition: all 2s ease-in-out 0;
+    }
 }
