@@ -9,3 +9,35 @@ main {
     align-items: center;
     justify-content: center;
 }
+
+.card {
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 400px;
+    width: 30%;
+    border-style: dotted;
+    margin: 2%;
+    border-radius: 5px dotted grey;
+    justify-content: space-evenly;
+    justify-items: center;
+}
+
+.card header {
+    display: flex;
+    width: 300px;
+    justify-content: center;
+    border-style: dotted;
+    background-color: lightblue;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    border: 5px solid grey;
+}
+
+.content code {
+    width: 300px;
+    justify-content: center;
+    background-color: lightblue;
+}
